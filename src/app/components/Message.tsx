@@ -1,7 +1,4 @@
-
-interface MessageResponse {
-  message: string;
-}
+import { unstable_noStore } from "next/cache"
 
 interface Post {
   id: number
@@ -11,6 +8,7 @@ interface Post {
 }
 
 export default async function Message() {
+  unstable_noStore() // opt out before we even get to the try/catch
     try {
         console.log('fetching message2');
       const res = await fetch('https://workers-bun-hono-drizzle.ymlik24.workers.dev/', {

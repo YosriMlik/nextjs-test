@@ -7,7 +7,7 @@ interface Post {
   timestamp: string
 }
 
-export default async function Message() {
+export default async function Posts() {
   unstable_noStore() // opt out before we even get to the try/catch
     try {
         console.log('fetching message2');

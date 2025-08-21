@@ -1,4 +1,6 @@
 import { unstable_noStore } from "next/cache"
+export const revalidate = 0        // seconds
+export const dynamic = 'force-dynamic'
 
 interface Post {
   id: number
